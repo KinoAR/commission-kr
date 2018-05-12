@@ -1,10 +1,12 @@
 <template>
   <div id="main" class="container">
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 full-navigation">
         <div class="col-6">
           <ul class="nav nav-pills">
-
+            <li v-bind:key="link.title" v-for="link in leftNav" class="nav-item">
+              <a v-bind:href="link.link" class="nav-link"> {{link.title}}</a>
+            </li>
           </ul>
         </div>
         <div class="col-6">
@@ -90,8 +92,12 @@ export default {
 
 
 <style>
+.full-navigation {
+  border: 1px solid #ff696e;
+}
 .main-area {
-  border-top: 1px solid #ff696e;
+  border-right: 1px solid #ff696e;
+  border-left: 1px solid #ff696e;
 }
 .main-content {
   padding-right: 0px !important;
