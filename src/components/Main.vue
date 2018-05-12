@@ -24,7 +24,7 @@
           <div class="card-body">
             <p class="card-text">
               <ul class="price-list">
-                <li v-for="item in prices" class="price-item">
+                <li v-bind:key="item.title" v-for="item in prices" class="price-item">
                   {{item.title}} - {{item.price}}
                 </li>
               </ul>
