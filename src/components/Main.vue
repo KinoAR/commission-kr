@@ -2,27 +2,31 @@
   <div id="main" class="container">
     <div class="row">
       <div class="col-12 full-navigation">
-        <div class="col-6">
+        <div class="row">
+          <div class="col-6">
           <ul class="nav nav-pills">
             <li v-bind:key="link.title" v-for="link in leftNav" class="nav-item">
               <a v-bind:href="link.link" class="nav-link"> {{link.title}}</a>
             </li>
           </ul>
         </div>
-        <div class="col-6">
-          <ul class="nav nav-pills">
-
+        <div class="col-6 justify-content-right">
+          <ul class="nav nav-pills justify-content-end">
+            <li v-bind:key="link.title" v-for="link in rightNav" class="nav-item">
+              <a v-bind:href="link.link" class="nav-link"> {{link.title}} </a>
+            </li>
           </ul>
+        </div>
         </div>
       </div>
       <div class="col-12">
         <div class="row main-area">
           <div class="col-8 main-content">
             <div class="card">
-              <div class="card-header">
+              <div class="card-header main-card-header">
                 Main Content Area
               </div>
-              <div class="card-body">
+              <div class="card-body  main-card-body">
                 <p class="card-text">
                   This is my landing page
                 </p>
@@ -31,8 +35,8 @@
           </div>
         <div class="col-4 price-content"> 
           <div class="card">
-          <div class="card-header"> Pricing </div>
-          <div class="card-body">
+          <div class="card-header main-card-header"> Pricing </div>
+          <div class="card-body main-card-body">
             <p class="card-text">
               <ul class="price-list">
                 <li v-bind:key="item.title" v-for="item in prices" class="price-item">
